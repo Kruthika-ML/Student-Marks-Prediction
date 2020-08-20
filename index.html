@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+	<title>Student Marks Prediction</title>
+</head>
+<style> 
+    body {
+      
+      background-color: #cccccc;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      height: 96vh;
+    }
+    </style>
+ <body 
+ style="background-color:blue;">
+    <img height="100" width ="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSBvElhz9dgJMs1MvHiThST09yAeeuSSgMdSg&usqp=CAU">
+    <h1>Student Marks Analysis</h1>
+    <form action="{{url_for('predict')}}" method="post">
+    <input type="text" name="study_hours" placeholder="study_hours" required="required">
+    
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>    </form>
+    <br>
+    <br>
+    {{ prediction_text }}
+</body>
+</html>
